@@ -1,0 +1,183 @@
+DATE=`date +%m/%d/%Y`
+TIME=`date +%k:%m:%s`
+USERS=`uptime | sed 's/users.*$//' | gawk '{print $NF}'`
+LOAD=`uptime | gawk '{print $NF}'`
+FREE=`vmstat 1 2 | sed -n '/[0-9]/p' |  sed -n '2p' | gawk '{print $4}'`
+IDLE=`vmstat 1 2 | sed -n '/[0-9]/p' |  sed -n '2p' | gawk '{print $15}'`
+echo "$DATE-$TIME-$USERS-$LOAD-$FREE-$IDLE" > /var/systemreport/report.csv
+echo "<html><body><h2>Report for $DATE</h2>" > /var/systemreport/webreport.html
+echo "<table border=\"1\">" >> /var/systemreport/webreport.html
+echo "<tr><td>Date</td><td>Time</td><td>Users</td>" >> /var/systemreport/webreport.html
+echo "<td>Load</td><td>Free memory</td><td>CPU IDLE</td><tr>" >> /var/systemreport/webreport.html
+cat /var/systemreport/report.csv  | awk -F - '{
+printf "<tr><td>%s</td><td>%s</td><td>%s</td>",  $1, $2, $3;
+printf "<td>%s</td><td>%s</td><td>%s</td>\n</tr>\n",  $4, $5, $6;
+}' >> /var/systemreport/webreport.html
+echo "</table></body></html>" >> /var/systemreport/webreport.html
+mail -a /var/systemreport/webreport.html  "Performance Report $DATE" root  < /dev/null
+10:C3:7B:BB:3F:74
+00:0C:29:FB:8B:98
+PPTP VPN service is installed.
+ServerIP:23.83.229.150
+Username:vpn
+Password:wVaZ1XiI
+Welcome to visit: http://teddysun.com/134.html
+13376412753
+836918
+
+
+https://github.com/menqgingyu/LinuxShell/blob/master/lamp-master.zip?raw=true
+
+
+aaa@miy.partner.onmschina.cn
+
+别人不能ping我，我能ping别人
+
+
+wget freevps.us/downloads/bench.sh -O - -o /dev/null | bash
+
+
+
+=TEXT(RANDBETWEEN("2017-01-28","2017-01-30")+RANDBETWEEN(VALUE("08:21:01")*10^6,VALUE("18:00:57")*10^6)%%%,"e-mm-dd hh:mm:ss")
+
+#! /bin/bash
+  IP="10.10.10"
+  RIP="10.10.10"
+  DN="gr.org"
+  Name="10.10.10.10"
+  
+  cat >> /etc/named.conf << +END+
+  zone "$DN." IN {
+          type master;
+         file "gr.org.db";
+ };
+ zone "$RIP.in-addr.arpa" IN{
+         type master;
+         file "$IP.db";
+ };
+ +END+
+ cat > /var/named/$DN.db <<+END+
+ \$TTL 86400
+ @    IN  SOA    ns.$DN.  root.$DN. (
+        20150317  6H  30M  1W  15M)
+      IN  NS     ns.$DN.
+      IN  MX  10   mail.$DN.
+ bbs  IN  CNAME  www.$DN.
+ ns   IN  A      $IP.10
+ www  IN  A      $IP.10
+ mail IN  A      $IP.11
+ +END+
+ cat > /var/named/$IP.db <<+END+
+ \$TTL 86400
+ @       IN      SOA     ns.$DN.       root.$DN.(
+                 20150317  6H  30M  1W  15M)
+         IN      NS      ns.$DN.
+ 10      IN      PTR     ns.$DN.
+ 10      IN      PTR     www.$DN.
+ 11      IN      PTR     mail.$DN.
+ +END+
+ cat > /etc/resolv.conf <<+END+
+ nameserver $Name
+ +END+
+ 一切公众话语日渐以娱乐的方式出现，并成为一种文化精神。我们的政治、宗教、新闻、体育、教育和商业都心甘情愿地成为娱乐的附庸，毫无怨言，甚至无声无息，其结果是我们成了一个娱乐至死的物种。
+
+ 我曾七次鄙视自己的灵魂: 第一次,当它本可进取时，却故作谦卑； 第二次,当它空虚时，用爱欲来填充； 第三次,在困难和容易之间，它选择了容易； 第四次,它犯了错，却借由别人也会犯错来宽慰自己； 第五次,它自由软弱，却把它认为是生命的坚韧； 第六次,当它鄙夷一张丑恶的嘴脸时，却不知那正是自己面具中的一副； 第七次,它侧身于生活的污泥中虽不甘心，却又畏首畏尾。
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ user
+ vbysnkqr
+ 
+ abc-1234
+ 
+ jixieM
+ jixieM1
+ 
+ 
+ 
+ 
+ service named start
+ 
+ 
+ 
+ 
+ 
+ 
+ https://medium.com/p/117428612f46
+ 
+ 
+ rip
+ 
+ network 1.0.0.0
+ network 2.0.0.0 
+ network 12.0.0.0 
+ network 23.0.0.0
+ network 3.0.0.0
+ 
+ ofpf
+ 
+  network 1.1.1.0 0.0.0.0 
+  network 2.2.2.0 0.0.0.0 
+  network 3.3.3.0 0.0.0.0 
+  network 12.1.1.0 0.0.0.255 
+  network 23.1.1.0 0.0.0.255 
+  
+  ospf
+  
+  R1
+  network 1.1.1.0 0.0.0.255
+  network 12.1.1.0 0.0.0.255
+  R2
+  network 12.1.1.0 0.0.0.255 
+  network 2.2.2.0 0.0.0.255
+  network 23.1.1.0 0.0.0.255
+  R3
+  network 3.3.3.0 0.0.0.255 
+  network 23.1.1.0 0.0.0.255
+  
+  
+  
+  
+  
+nginx+keepalived实现双机热备的高可用
+可扩展、高可用、负载均衡网站架构
+LVS集群中的IP负载均衡技术
+LVS负载均衡集群架设
+借助LVS+Keepalived实现负载均衡
+nginx+keepalived实现双机热备的高可用
+
+
+Keepalived是一个基于VRRP协议来实现的服务高可用方案，可以利用其来避免IP单点故障，类似的工具还有heartbeat、corosync、pacemaker。但是它一般不会单独出现，而是与其它负载均衡技术（如lvs、haproxy、nginx）一起工作来达到集群的高可用。
+Nginx的优点：
+1、工作在OSI第7层，可以针对http应用做一些分流的策略。比如针对域名、目录结构。它的正则比HAProxy更为强大和灵活；
+2、Nginx对网络的依赖非常小，理论上能ping通就就能进行负载功能，这个也是它的优势所在；
+3、Nginx安装和配置比较简单，测试起来比较方便；
+4、可以承担高的负载压力且稳定，一般能支撑超过几万次的并发量；
+5、Nginx可以通过端口检测到服务器内部的故障，比如根据服务器处理网页返回的状态码、超时等等，并且会把返回错误的请求重新提交到另一个节点；
+6、Nginx不仅仅是一款优秀的负载均衡器/反向代理软件，它同时也是功能强大的Web应用服务器。LNMP现在也是非常流行的web环境，大有和LAMP环境分庭抗礼之势，Nginx在处理静态页面、特别是抗高并发方面相对apache有优势；
+7、Nginx现在作为Web反向加速缓存越来越成熟了，速度比传统的Squid服务器更快，有需求的朋友可以考虑用其作为反向代理加速器；
+Nginx的缺点：
+1、Nginx不支持url来检测。
+2、Nginx仅能支持http和Email，这个它的弱势。
+3、Nginx的Session的保持，Cookie的引导能力相对欠缺。
+ 
+LVS的优点：
+1、抗负载能力强、工作在第4层仅作分发之用，没有流量的产生，这个特点也决定了它在负载均衡软件里的性能最强的；无流量，同时保证了均衡器IO的性能不会受到大流量的影响；
+2、工作稳定，自身有完整的双机热备方案，如LVS+Keepalived和LVS+Heartbeat；
+3、应用范围比较广，可以对所有应用做负载均衡；
+4、配置性比较低，这是一个缺点也是一个优点，因为没有可太多配置的东西，所以并不需要太多接触，大大减少了人为出错的几率；
+LVS的缺点：
+1、软件本身不支持正则处理，不能做动静分离，这就凸显了Nginx/HAProxy+Keepalived的优势。
+2、如果网站应用比较庞大，LVS/DR+Keepalived就比较复杂了，特别是后面有Windows Server应用的机器，实施及配置还有维护过程就比较麻烦，相对而言，Nginx/HAProxy+Keepalived就简单多了。
+
+HAProxy的优点：
+1、HAProxy是支持虚拟主机的，可以工作在4、7层(支持多网段)；
+2、能够补充Nginx的一些缺点比如Session的保持，Cookie的引导等工作；
+3、支持url检测后端的服务器；
+4、它跟LVS一样，本身仅仅就只是一款负载均衡软件；单纯从效率上来讲HAProxy更会比Nginx有更出色的负载均衡速度，在并发处理上也是优于Nginx的；
+5、HAProxy可以对Mysql读进行负载均衡，对后端的MySQL节点进行检测和负载均衡，不过在后端的MySQL slaves数量超过10台时性能不如LVS；
+6、HAProxy的算法较多，达到8种；

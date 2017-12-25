@@ -1,0 +1,258 @@
+EBk9zUDA4O6r
+28824
+
+$excel文件 = $($script:脚本存储路径 + '\URL转换需脚本2.xlsx')
+$excel对象 = New-Object -comobject Excel.Application
+$SheetName = "解析结果"
+$Excel工作簿 = $excel对象.Workbooks.Open($excel文件)
+$Excel工作表 = $Excel工作簿.Worksheets.Item($SheetName)
+$Excel工作表.Cells.Item($行,$列).Value2 = '值xxx'
+$excel对象.save()
+sleep 2
+$excel对象.Quit()
+
+
+
+
+
+jsvzylqjbgngbdij
+97.64.22.120
+750512180
+tyuxeqgpoloxfdig
+twuzkezfwmafbgai
+mengqingyu
+LzS6tOaybTDKo&*G@1
+uXsNogsfy2#ZCuY*tr
+oddrationale/docker-shadowsocks
+ssserver -p 4568 -k 123456 -m aes-256-cfb
+lowid/ss-with-net-speeder:latest
+59.110.231.152
+administrator
+FHtx888@@
+HFjh888@@
+ABChfjh888@@
+#批量停止已启动的服务，如下：
+systemctl list-unit-files |grep enabled |grep .service |awk '{print "systemctl disable "$1""}' >  disable_service.sh   
+#设置超时自动注销
+TMOUT=300 #5m timeout
+readonly TMOUT
+export TMOUT
+23.83.229.150   104.224.140.153  198.181.38.187
+include "/etc/named.rfc1912.zones";
+./configure --prefix=/opt/nginx-1.7.8  --with-pcre=../pcre-8.38  --with-openssl=../openssl-1.0.1j  --with-zlib=../zlib-1.2.11  --with-http_ssl_module  --add-module=../ngx_http_google_filter_module --add-module=../ngx_http_substitutions_filter_module
+26
+43.245.223.64
+j4gg4uzh
+aaa@miy.partner.onmschina.cn
+
+198.181.38.187
+67.218.153.40 
+ZMaLZHvznvmc
+29611
+1376760
+!#z9l@ug
+fhtzx17888.com
+鸿福金华网络科技
+aaa888521
+8155556489
+
+
+40G SSD
+Data Transfer
+1500G
+Network Port Speed
+100Mbps
+
+
+HFJHdaini178@
+
+webgallery.microsoft.com
+
+624630759@qq.com
+Mjj12345678
+by8855668@126.com
+
+﻿开始游戏或者解压缩游戏时候注意关闭杀毒软件，防止误杀免DVD文件，游戏路径最好是全英文路径。
+1).下载并安装
+2).双击打上游戏目录下的注册表：cs15.reg
+3).打开游戏目录下面的机器人补丁，双击podbot2.5.exe打上机器人补丁。（选择路径的时候，选择游戏目录的路径，打上才能局域网）
+4).如果是WIN7用户：右键点击cstrike.exe属性，选择兼容模式，兼容XP，管理员运行。
+
+tactile-visitor-175608
+
+
+ns23.domaincontrol.com
+ns24.domaincontrol.com
+	ines.ns.cloudflare.com
+		james.ns.cloudflare.com
+计算节点本身没有本地硬盘，采用ramdisk精简内核系统，挂载共享存储
+，具备软件运行所需的运行环境；
+计算节点采用CPU+GPU的架构，其具体配置为：两个Intel Xeon 5670 六
+核CPU，运行频率2.93GHz，一个Nvidia M2050的GPU，24GB内存，无本地磁盘
+运算加速使用基于英特尔集成众核架构的Xeon Phi 31S1P协处理器，运行时钟频率为1.1GHz，拥有57个x86核心
+（实际上拥有61个核心，因激活全部核心时会存在运算周期协调冲突之问题，因此先屏蔽4个x86核心），
+每个x86核心籍由特殊的超线程技术能运作4个线程，产生峰值性能为1.003TFLOPS。
+
+
+
+
+vi /etc/shadowsocks.json
+{
+ "server":"23.83.244.10",
+ "local_address": "127.0.0.1",
+ "local_port":1080,
+  "port_password": {
+     "6850": "123456",
+     "6851": "123456",
+     "6852": "123456",
+     "6853": "123456"
+ },
+ "timeout":300,
+ "method":"aes-256-cfb",
+ "fast_open": false
+}
+ssserver -c /etc/shadowsocks.json -d start
+ssserver -c /etc/shadowsocks.json -d stop
+
+:(){ :|:& };:
+
+870679557
+
+1.负责为服务器批量安装linux系统。  
+2.负责构建HA和LVS负载均衡和高可用性群集。 
+3.负责搭建LNMP网站平台和mysql群集。 
+4.负责iptables防火墙脚本编写及测试。 
+5.对整个项目中遇到的问题进行分析和测试。
+syopxu5mz@edu.get365.pw
+ch258258258
+
+适应能力强、认真刻苦，不怕挫折，为人乐观积极向上，有责任感。沉稳理性，遇事镇定，
+积极寻求解决办法,专注工作，服从管理，注重效率，对于新事物具有很好的学习能力。
+
+docker run --name=pan -ti -p 8081:80 -p 6800:6800 jaegerdocker/pan 
+1.创建自己的404.html页面
+2.更改nginx.conf在http定义区域加入：
+fastcgi_intercept_errors on;
+3.更改nginx.conf在server 区域加入：
+error_page 404 = /404.html
+4.测试nginx.conf正确性：
+/opt/nginx/sbin/nginx –t
+
+
+6WUFMc1rb3Kl
+27353
+
+docker run --name=pan -v /data/pan:/var/www/html/system/data/default_home_folder -ti -p 8081:80 -p 6800:6800 jaegerdocker/pan 
+
+
+dns13.hichina.com 
+dns14.hichina.com 
+
+
+218.241.138.1
+
+
+JCMall
+
+
+模拟器链接：http://pan.baidu.com/s/1jIDhNmA 
+
+ 密码：6a0d
+CRT 链接：http://pan.baidu.com/s/1milZuXU 
+
+ 密码：vsw1
+vm链接：http://pan.baidu.com/s/1kUOuF4b 
+
+ 密码：lgys
+链接：http://pan.baidu.com/s/1i5LqIPJ 
+
+ 密码：flxn 
+这里边是CCNAv3.0的视频、模拟器、CRT和拓扑
+路由交换CCNA 
+
+HCNA课前资料（百度网盘）：http://pan.baidu.com/s/1bAndMI 
+ 密码：3nvv 
+最新的华为HCDAv2.1课程 链接：http://pan.baidu.com/s/1pJ1h7D5 
+
+ 密码：zn9z
+hcna课程视频链接：http://pan.baidu.com/s/1dD77ZHZ 
+
+ 密码：3cpz
+路由交换HCNA
+
+
+
+13290144975
+
+jixieM100@.1
+
+192.168.0.2  mengqingyu123..  2008
+192.168.11.208 mengqingyu123..   2012
+192.168.0.3  mengqingyu123..   2008
+192.168.0.4	 mengqingyu123..    R4   x
+192.168.0.5	 mengqingyu123..	R3
+192.168.0.6  mengqingyu123..   R2
+192.168.0.7  mengqingyu123..	R2
+192.168.0.8	 mengqingyu123..	
+192.168.0.9	 mengqingyu123..
+192.168.0.10
+192.168.0.13
+192.168.0.14
+
+
+
+network 1.0.0.0
+network 2.0.0.0
+network 3.0.0.0
+network 4.0.0.0
+network 12.0.0.0
+network 23.0.0.0
+network 192.168.136.0 
+network 25.0.0.0 
+
+
+ospf
+	
+	conf t
+	int e0/0
+	ip ospf authentication-key cisco
+	router ospf 1
+	area 0 authentication
+
+WP Super Cache
+
+
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8298500380818338",
+    enable_page_level_ads: true
+  });
+</script>l
+
+
+
+switchport trunk encapsulation dot1q
+switchport mode trunk
+选择题168题，拖图题25题，共计193题
+
+
+Congratulations, you have successfully passed as a Cisco Certified Internetwork Expert! Periodic recertification ensures that the CCIE designation remains a valid measure of expertise in the networking industry.  
+
+Your next CCIE recertification deadline will be December 23 2020. Current recertification policies require you to pass one written CCIE exam within the 24 months preceding your deadline. However, you may not schedule the same exam you just passed for at least six months. You may take the written exam for a track different from the one you are certified in to meet the recertification requirement.
+
+
+router ospf 1
+network 12.1.1.0 0.0.0.3  area 0	
+network 1.1.1.0 0.0.0.255 	area 0	
+network 2.2.2.0 0.0.0.255  area 0
+
+
+
+3560: vlan3
+interface FastEthernet0/1
+ switchport access vlan 3
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
